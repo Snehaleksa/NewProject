@@ -23,7 +23,11 @@ from app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('reg',views.register)
+    path('reg',views.register),
+    path('log',views.Login),
+    path('home',views.home),
+    path('logout',views.logout),
+    path('edit/<int:id>',views.edit,name='edit'),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

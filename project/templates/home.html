@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,th,td{
+            border:1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <a href="logout">Logout</a>
+    <table>
+        <tr>
+            <th>first_name</th>
+            <th>email</th>
+            <th>username</th>
+            <th>password</th>
+            <th>age</th>
+            <th>date</th>
+            <th>address</th>
+            <th>image</th>
+            <th></th>
+        </tr>
+        
+        <tr>
+            <td>{{data.first_name}}</td>
+            <td>{{data.email}}</td>
+            <td>{{data.username}}</td>
+            <td>{{data.password}}</td>
+            <td>{{data.age}}</td>
+            <td>{{data.date}}</td>
+            <td>{{data.address}}</td>
+
+            <td><img src="{{data.image.url }}" alt=""width="150px" height="150px"></td>
+            <td><a href="{% url 'edit' id=data.id %}">Edit</a></td>
+        
+
+            
+        </tr>
+        
+        
+    </table>
+    
+</body>
+</html>
