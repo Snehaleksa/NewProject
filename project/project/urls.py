@@ -30,7 +30,8 @@ urlpatterns = [
     path('edit/<int:id>',views.edit,name='edit'),
     path('index',views.index),
     path('logo',views.logo),
-    
+    path('marks',views.marks),
+
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

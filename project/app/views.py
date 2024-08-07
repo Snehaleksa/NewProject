@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from django.contrib.auth.models import User
-from .models import CustomUser
+from .models import CustomUser,Marks
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.models import auth
 
@@ -75,4 +75,25 @@ def index(request):
 
 def logo(request):
     return render(request,'login2.html') 
-    
+
+def marks(request):
+    data=CustomUser.objects.get(id=request.user.id)
+    print(data)
+    if request.method=='POST':
+        maths=request.POST['maths']
+        english=request.POST['english']
+        malayalam=request.POST['malayalam']
+        hindi=request.POST['hindi']
+        data1=Marks.objects.create(user_id=data,maths=maths,english=english,malayalam=malayalam,hindi=hindi)
+        data1.save()
+        return redirect(home)
+    else:
+        return render(request,'marks.html')
+
+
+
+
+
+
+
+

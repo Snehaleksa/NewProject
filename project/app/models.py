@@ -13,3 +13,14 @@ class CustomUser(AbstractUser):
 
     def __str__(self):
         return self.username
+
+
+class Marks(models.Model):
+    user_id=models.ForeignKey(CustomUser,on_delete=models.CASCADE)
+    maths =models.CharField(max_length=100)
+    english=models.CharField(max_length=100)
+    malayalam=models.CharField(max_length=100)
+    hindi=models.CharField(max_length=100)        
+
+    def __str__(self):
+        return self.maths

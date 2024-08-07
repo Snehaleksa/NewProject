@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="marks" method='post'>
+        {% csrf_token %}
+        <label for="">Maths</label>
+        <input type="text"name="maths" required><br><br>
+        <label for="">English</label>
+        <input type="text"name="english">
+        <label for="">Malayalam</label>
+        <input type="text"name="malayalam" required><br><br>
+        <label for="">Hindi</label>
+        <input type="text"name="hindi" required><br><br>
+        <input type="submit">
+    </form>
+</body>
+</html>
