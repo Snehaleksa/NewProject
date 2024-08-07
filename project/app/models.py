@@ -23,4 +23,4 @@ class Marks(models.Model):
     hindi=models.CharField(max_length=100)        
 
     def __str__(self):
-        return self.maths
+        return self.user_id.username
