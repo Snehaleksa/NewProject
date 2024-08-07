@@ -28,6 +28,9 @@ urlpatterns = [
     path('home',views.home),
     path('logout',views.logout),
     path('edit/<int:id>',views.edit,name='edit'),
+    path('index',views.index),
+    path('logo',views.logo),
+    
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

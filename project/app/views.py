@@ -48,6 +48,7 @@ def Login(request):
 
 def home(request):
     data=CustomUser.objects.get(id=request.user.id)
+    print(data.age)
     return render(request,'home.html',{'data':data})
 
 
@@ -63,8 +64,15 @@ def edit(request,id):
         data.age=request.POST['age']
         data.date=request.POST['date']
         data.address=request.POST['address']
-        data.image=request.POST['image']
+        if 'Image' in request.FILES:
+           data.image=request.POST['image']
         data.save()
         return redirect(home)
     else:
         return render(request,'edit.html',{'data':data})
+def index(request):
+    return render(request,'index.html')
+
+def logo(request):
+    return render(request,'login2.html') 
+    

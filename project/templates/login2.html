@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+    
+    
+    
+    
+    <style>
+    
+        .container{
+            background-color: blue;
+            margin: auto;
+        }
+        .row{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        ul{
+            list-style-type: none;
+        }
+        .footer{
+            background-color: blue;
+            padding: 50px;
+            margin-top: 100px;
+            
+        }
+        .footer-col{
+            padding: 0 15px;
+            color: white;
+        }
+        .footer-col ul li{
+            margin-bottom: 10px;
+            
+            
+
+        }
+        .list{
+            list-style-type: none;
+            display: flex;
+            gap:20px;
+            padding:20px;
+            margin-right: 450px;
+            
+        }
+        .list1{
+            list-style-type: none;
+            display: flex;
+            gap:20px;
+            padding:20px;
+            
+        }
+        .list2{
+            list-style-type: none;
+            display: flex;
+            gap:20px;
+            
+        }
+        .main{
+            display: flex;
+            justify-content: space-around;
+            
+            
+        }
+        .main2{
+            display: flex;
+            justify-content: space-around;
+            
+        }
+        
+
+        button{
+            color: azure;
+            border: none;
+            padding: 15px 15px;
+            border-radius: 5px;
+            margin-right: 200px;
+            background-color: blue;
+            
+
+        }
+        ul{
+            display: inline-block;
+            justify-content: space-between;
+            padding-left: 0;
+        }
+    
+        
+        form{
+            margin-top: 70px;
+        }
+
+
+        
+    </style>
+</head>
+<body>
+    <nav class="main"> 
+       
+
+            <div>
+             <ul class="list1">
+              <li>About</li>
+              <li>Doctors</li>
+              <li>Contact</li>
+              <li>Faq</li>
+            
+             </ul>
+            
+           </div>
+          <div>
+          
+            <ul class="list">
+                <li>88451203458</li>
+                <li>support@gmail.com</li>
+            </ul>
+          
+          </div>
+    </nav>
+    
+    <div class="main2">
+        
+            
+            
+                <div>
+                    
+                    <a href="index.html"><img src="{% static 'img/logo.png' %}" alt="#"></a>
+                </div>    
+                <div>
+                  <ul class="list2">
+                
+                    <li>Home</li>
+                    <li>Doctors</li>
+                    <li>Services</li>
+                    <li>Pages</li>
+                    <li>Blogs</li>
+                    <li>Contact Us</li>
+                
+                  </ul>
+                </div>
+
+
+        
+               <div>
+            
+                 <button>Login</button>
+            
+               </div>
+    </div>
+    <div>
+        <form action="">
+            <label for="">username</label>
+            <input type="text"name="username" required><br><br>
+            <label for="">Password</label>
+            <input type="text"name="password" required><br><br>
+            <input type="submit">
+        </form>
+    <div>
+        
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h2>About Us</h2>
+				<p>Lorem ipsum dolor sit am<br>consectetur adipisicing elit do <br> eiusmod tempor incididunt ut <br> labore dolore magna.</p>
+				
+				
+            </div>
+            <div class="footer-col">
+                <h2>Quick Links</h2>
+				
+                
+					
+				<ul>
+				    <li>Home</li>
+					<li>About Us</li>
+					<li>Services</li>
+					<li>Our Cases</li>
+					<li>Other Links</li>	
+				</ul>
+					
+					
+				<ul>
+					<li>Consuling</li>
+					<li>Finance</li>
+					<li>Testimonials</li>
+					<li>FAQ</li>
+					<li>Contact Us</li>	
+										
+                </ul>
+					
+				
+                  
+                
+                 
+			</div>
+						
+            
+            <div class="footer-col">
+                <h2>Open Hours</h2>
+				<p>Lorem ipsum dolor sit ame <br> consectetur adipisicing elit do <br> eiusmod tempor incididunt.</p>
+				<div>
+				  <p>Monday - Fridayp <span>8.00-20.00</span></p>
+				  <p>Saturday <span>9.00-18.30</span></p>
+				  <p>Monday - Thusday <span>9.00-15.00</span></p>
+				  
+                </div>
+                     
+                  
+            
+            </div>
+            <div class="footer-col">
+                <h2>Newsletter</h2>
+				<p>subscribe to our newsletter to get<br> allour news in your inbox.. Lorem <br>ipsum dolor sit amet, consectetur <br> adipisicing elit,</p>
+				<form action="">
+					<label for="">Email</label>
+                    <input type="text" name="email">
+					
+				</form>
+            </div>
+       </div>
+
+    </div>
+
+</footer>
+  
+
+</body>
+</html>
